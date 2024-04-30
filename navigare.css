@@ -1,0 +1,76 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    min-width: 100vw;
+    min-height: 100vh;
+    background-image: url(padure.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+nav{
+    background-color:rgba(255, 255, 255, 0.507) ;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+    
+}
+nav ul{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    justify-content: flex-end;
+    padding-right: 15px;
+}
+nav ul li{
+    height: 40px;
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+li a{
+    width: 100%;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    position: relative;
+}
+nav li:first-child{
+    margin-right: auto;
+    font-size: 30px;
+}
+ul li:last-child:hover{
+    background-color: rgb(212, 212, 212);
+}
+ul li:hover{
+    background: #e0e1dd;
+}
+.sidebar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.452);
+    backdrop-filter: blur(10px);
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+@media (max-width: 800px)
+{
+    .hideOnMobile{
+        display: none;
+    }
+}
+@media (max-width:400px){
+    .sidebar{
+        width: 100%;
+    }
+}
